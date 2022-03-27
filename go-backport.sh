@@ -11,7 +11,7 @@ PWDMINUSGOPATH=$(echo $PWD | sed "s|$GOPATH||")
 
 echo $PWDMINUSGOPATH
 
-docker build -f "$mydir/../lib/Dockerfile" -t go-backport:latest "$mydir/../lib/go-backport/"
+docker build -f "$mydir/../lib/go-backport/Dockerfile" -t go-backport:latest "$mydir/../lib/go-backport/"
 
 docker run --rm -v "$GOPATH/src/github.com/eyedeekay/go-I2P-jpackage":"/usr/src/github.com/eyedeekay/go-I2P-jpackage" \
     -v "$PWD":"/usr$PWDMINUSGOPATH" -w "/usr$PWDMINUSGOPATH" -e GOOS="$GOOS" -e GOARCH="$GOARCH" golang:1.18 go $@
