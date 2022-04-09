@@ -15,6 +15,7 @@ RUN echo "deb http://deb.debian.org/debian oldstable main" >> /etc/apt/sources.l
         libgtk-3-dev \
         libglib2.0-dev \
         libayatana-appindicator3-dev \
+        libolm-dev \
         && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN find / -name '*.pc'

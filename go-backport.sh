@@ -21,4 +21,24 @@ docker run --rm \
     -e GOOS="$GOOS" \
     -e GOARCH="$GOARCH" \
     -e CGO_ENABLED="$CGO_ENABLED" \
+    -e GO111MODULE="$GO111MODULE" \
+    -e GOARCH="$GOARCH" \
+    -e GOCACHE="$GOCACHE" \
+    -e GONOPROXY="$GONOPROXY" \
+    -e GONOSUMDB="$GONOSUMDB" \
+    -e GOPROXY="$GOPROXY" \
+    -e GOSUMDB="$GOSUMDB" \
+    -e GOVCS="$GOVCS" \
+    -e AR="$AR" \
+    -e CC="$CC" \
+    -e CXX="$CXX" \
+    -e GOMOD="$GOMOD" \
+    -e GOWORK="$GOWORK" \
+    -e CGO_CFLAGS="$CGO_CFLAGS" \
+    -e CGO_CPPFLAGS="$CGO_CPPFLAGS" \
+    -e CGO_CXXFLAGS="$CGO_CXXFLAGS" \
+    -e CGO_FFLAGS="$CGO_FFLAGS" \
+    -e CGO_LDFLAGS="$CGO_LDFLAGS" \
+    -e PKG_CONFIG="$PKG_CONFIG" \
+    -e GOGCCFLAGS="$GOGCCFLAGS" \
     go-backport:latest go "$@"
